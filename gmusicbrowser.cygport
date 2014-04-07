@@ -1,0 +1,18 @@
+NAME="gmusicbrowser"
+VERSION=1.1.12
+RELEASE=1
+CATEGORY="Audio"
+SUMMARY="Gtk2-Perl jukebox"
+DESCRIPTION="An open-source jukebox for large collections of mp3/ogg/flac/mpc/ape
+files, written in Perl/Gtk2."
+HOMEPAGE="http://gmusicbrowser.org/"
+SRC_URI="http://gmusicbrowser.org/download/${NAME}-${VERSION}.tar.gz"
+
+ARCH=noarch
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	cyginstall docdir=${D}/usr/share/doc/${NAME} menudir=${T}
+}
